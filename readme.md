@@ -185,3 +185,22 @@ hadoop jar target/cisc-525-mapreduce-jar-with-dependencies.jar com.drkiettran.ma
 ```shell script
 hdfs dfs -cat /tmp/1987/part-r-00000
 ```
+## Flights by Origin application
+### Run
+```shell script
+hadoop jar target/cisc-525-mapreduce-jar-with-dependencies.jar com.drkiettran.mapreduce.FlightsByOrig /user/student/airline/1987.csv /tmp/1987_orig
+```
+### Check the output
+```shell script
+hdfs dfs -cat /tmp/1987_orig/part-r-00000
+```
+
+## Flights by Destination application
+### Run
+```shell script
+hadoop jar target/cisc-525-mapreduce-jar-with-dependencies.jar com.drkiettran.mapreduce.FlightsByDest /user/student/airline/1987.csv /tmp/1987_dest
+```
+### Check the output
+```shell script
+hdfs dfs -cat /tmp/1987_dest/part-r-00000
+```
